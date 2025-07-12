@@ -1,195 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto HQ-Translator</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #ffffff;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-align: center;
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
-
-        a {
-            color: #76c6ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .top-header {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .top-header .authors {
-            margin-top: 15px;
-        }
-
-        .top-header .authors a {
-            color: #28a745;
-            margin: 0 10px;
-            font-size: 1.1em;
-        }
-
-        .top-header .highlight {
-            color: #dc3545;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-top: 30px;
-        }
-
-        .top-header .buttons {
-            margin-top: 25px;
-        }
-
-        .top-header .button {
-            background-color: #333;
-            color: #f0f0f0;
-            padding: 12px 25px;
-            margin: 0 10px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .top-header .button:hover {
-            background-color: #555;
-            text-decoration: none;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #333;
-            margin: 60px 0;
-        }
-
-        pre {
-            background-color: #2c2c2c;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-
-        code {
-            font-family: "Courier New", Courier, monospace;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .execution-images img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-
-        .execution-images p {
-            text-align: center;
-            font-size: 0.9em;
-            color: #aaa;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQ Translator</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        a {
+            color: #76c6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav li {
+            margin: 5px 15px;
+        }
+        nav a {
+            font-weight: bold;
+        }
+        pre {
+            background-color: #2c2c2c;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: "Courier New", Courier, monospace;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="top-header">
-        <h1>HQ-Translator</h1>
-        <div class="authors">
-            <a href="#equipe">Marcelo Henrique</a>
-            <a href="#equipe">Gabriel Nascimento</a>
-            <a href="#equipe">Gustavo Ferreira</a>
-            <a href="#equipe">Elinaldo Emanoel</a>
-            <a href="#equipe">Matheus Stepple</a>
-        </div>
-        <p class="highlight">Projeto de Estruturas de Dados Orientadas a Objetos (2025)</p>
-        <div class="buttons">
-            <a href="#resumo" class="button">📄 Resumo</a>
-            <a href="https://github.com/marcelohenrique15/hq-translator" target="_blank" class="button">💻 Repositório</a>
-        </div>
-    </header>
+    <div class="container">
+        <h1>HQ Translator</h1>
 
-    <div class="container">
+        <nav>
+            <h2>Índice</h2>
+            <ul>
+                <li><a href="#visao-geral">Visão Geral</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#requisitos">Requisitos</a></li>
+                <li><a href="#execucao">Execução</a></li>
+                <li><a href="#estrutura">Estrutura do Projeto</a></li>
+                <li><a href="#imagens">Imagens em Execução</a></li>
+            </ul>
+        </nav>
 
-        <section id="resumo">
-            <h2>Resumo</h2>
-            <p>
-                O <strong>HQ-Translator</strong> é uma aplicação de tradução de texto em tempo real desenvolvida em C++ com arquitetura orientada a objetos. O sistema é estruturado em classes que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A webcam fornece os frames que são analisados pelo OCR Tesseract, traduzidos pela API LibreTranslate e, por fim, exibidos em tempo real com os textos traduzidos sobrepostos ao vídeo original.
-            </p>
-            <p>
-                Para garantir fluidez e desempenho, o sistema aplica uma arquitetura concorrente baseada em múltiplas threads. Cada etapa (captura, OCR, tradução e exibição) é executada por objetos distintos em sua própria thread, formando um pipeline assíncrono. Essa estrutura modular permite fácil manutenção, escalabilidade e maior eficiência.
-            </p>
+        <section id="visao-geral">
+            <h2>Visão Geral</h2>
+            <p>Este projeto, HQ Translator, é uma aplicação de tradução de texto em tempo real desenvolvida em C++. Ele foi projetado para capturar frames de uma webcam, detectar textos nos frames, traduzi-los instantaneamente e, em seguida, sobrepor as traduções de volta no feed de vídeo original. A solução adota uma arquitetura robusta e multi-threaded para garantir alto desempenho.</p>
+            
+            <h3>Como Funciona a Arquitetura Multi-threaded: Paralelismo em pipeline.</h3>
+            <p>O Hq Translator opera através de um eficiente pipeline de processamento assíncrono, onde cada etapa é executada em uma thread dedicada, garantindo que operações complexas não congelem a aplicação:</p>
+            <ul>
+                <li><strong>Captura de Vídeo:</strong> uma thread dedicada gerencia a webcam, capturando frames continuamente e os disponibilizando para as próximas etapas.</li>
+                <li><strong>Detecção de Texto (OCR):</strong> outra thread consome esses frames, utilizando a poderosa biblioteca Tesseract OCR para identificar e extrair textos presentes na imagem. Para otimizar o desempenho, esta etapa é executada em intervalos controlados.</li>
+                <li><strong>Tradução Inteligente:</strong> uma terceira thread recebe os textos detectados. Ela se integra com a API LibreTranslate para realizar as traduções. Um mecanismo de cache é implementado para armazenar traduções frequentes, minimizando chamadas repetidas à API e melhorando a performance.</li>
+                <li><strong>Exibição e Sobreposição:</strong> a thread principal da aplicação exibe o feed de vídeo da webcam. As traduções obtidas são desenhadas dinamicamente sobre o vídeo, permitindo que o usuário veja a tradução em tempo real.</li>
+            </ul>
+        </section>
 
-            <div class="execution-images">
-                <img src="image/imagem1.jpeg" alt="Execução do HQ-Translator">
-                <p>Legenda: Exemplo de detecção de texto e tradução automática exibidos em tempo real.</p>
-            </div>
-        </section>
+        <section id="ferramentas">
+            <h2>Ferramentas</h2>
+            <p>Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas principais:</p>
+            <ul>
+                <li><strong>C++:</strong> a linguagem de programação principal para todo o desenvolvimento do sistema.</li>
+                <li><strong>OpenCV:</strong> biblioteca de visão computacional essencial para a captura de vídeo da webcam, manipulação de frames e pré-processamento de imagens.</li>
+                <li><strong>Tesseract:</strong> motor de Reconhecimento Óptico de Caracteres, utilizado para a detecção e extração de texto de imagens e frames de vídeo.</li>
+                <li><strong>Nlohmann:</strong> biblioteca C++ para parseamento e serialização de dados no formato JSON, fundamental para a comunicação com a API do LibreTranslate.</li>
+                <li><strong>LibreTranslate:</strong> uma API de tradução de código aberto, empregada para realizar as traduções dos textos detectados.</li>
+            </ul>
 
-        <hr>
+            <h3>Ferramentas de Desenvolvimento e Comunicação</h3>
+            <p>Além das ferramentas citadas anteriormente, temos as ferramentas de desenvolvimento e comunicação:</p>
+            <ul>
+                <li><strong>VS Code:</strong> ambiente de Desenvolvimento Integrado (IDE) leve e poderoso, utilizado para a escrita, depuração e gerenciamento do código-fonte.</li>
+                <li><strong>Git:</strong> sistema de controle de versão distribuído, essencial para o rastreamento de alterações no código.</li>
+                <li><strong>GitHub:</strong> plataforma de hospedagem de código-fonte baseada em Git, utilizada para o compartilhamento do repositório, colaboração em equipe, controle de versões e gerenciamento de projetos.</li>
+                <li><strong>WhatsApp:</strong> utilizado para comunicação rápida e direta entre os membros da equipe.</li>
+                <li><strong>Discord:</strong> plataforma de comunicação que oferece recursos como chat de texto, voz e vídeo, canais temáticos e compartilhamento de arquivos, ideal para discussões mais aprofundadas e reuniões de equipe.</li>
+            </ul>
+        </section>
 
-        <section id="tecnologias">
-            <h2>Tecnologias Utilizadas</h2>
-            <ul>
-                <li><strong>C++:</strong> Linguagem principal, escolhida por seu alto desempenho.</li>
-                <li><strong>OpenCV:</strong> Essencial para a captura de vídeo e manipulação de imagem.</li>
-                <li><strong>Tesseract:</strong> Motor de Reconhecimento Óptico de Caracteres (OCR).</li>
-                <li><strong>LibreTranslate:</strong> API de tradução de código aberto.</li>
-                <li><strong>Docker:</strong> Utilizado para criar um ambiente de execução consistente e isolado.</li>
-                <li><strong>CMake:</strong> Sistema de automação da compilação do projeto.</li>
-            </ul>
-        </section>
+        <section id="requisitos">
+            <h2>Requisitos</h2>
+            <p>É necessário ter uma Webcam e o Docker instalado. Caso não tenha o Docker instalado, siga o passo a passo para instalação no Linux ou via WSL:</p>
+            <ol>
+                <li>
+                    Instale as dependências do Docker:
+                    <pre><code>sudo apt-get update
+sudo apt-get install ca-certificates curl apt-transport-https software-properties-common</code></pre>
+                </li>
+                <li>
+                    Adicione a chave GPG:
+                    <pre><code>sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc</code></pre>
+                </li>
+                <li>
+                    Adicione o repositório Docker ao apt sources:
+                    <pre><code>echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code></pre>
+                </li>
+                <li>
+                    Instale o Docker:
+                    <pre><code>sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
+                </li>
+                <li>
+                    Adicione seu usuário ao grupo docker para evitar o uso de "sudo" (IMPORTANTE PARA EXECUÇÃO):
+                    <pre><code>sudo usermod -aG docker ${USER}</code></pre>
+                </li>
+            </ol>
+            <p>Necessária reinicialização do computador após o passo 5.</p>
+        </section>
 
-        <hr>
+        <section id="execucao">
+            <h2>Execução</h2>
+            <ol>
+                <li>
+                    Clone o projeto:
+                    <pre><code>git clone https://github.com/marcelohenrique15/hq-translator.git
+cd hq-translator</code></pre>
+                </li>
+                <li>
+                    Dê permissão para os scripts do projeto:
+                    <pre><code>chmod +x start_docker.sh stop_docker.sh delete_docker.sh run.sh</code></pre>
+                </li>
+                <li>
+                    Ative o Docker (pode levar alguns minutos):
+                    <pre><code>./start_docker.sh</code></pre>
+                </li>
+                <li>
+                    E após entrar no terminal bash do Docker, execute:
+                    <pre><code>./run.sh</code></pre>
+                </li>
+            </ol>
+        </section>
 
-        <section id="equipe">
-            <h2>Equipe</h2>
-            <p><strong>Marcelo Henrique:</strong> Idealizador do projeto, focou no backend, arquitetura do pipeline de dados e integração das funcionalidades de detecção e tradução.</p>
-            <p><strong>Gabriel Nascimento:</strong> Atuou no frontend e colaborou em diversas áreas do projeto.</p>
-            <p><strong>Gustavo Ferreira:</strong> Trabalhou no algoritmo de detecção de texto e na funcionalidade de sobreposição da tradução no vídeo (realidade aumentada).</p>
-            <p><strong>Elinaldo Emanoel:</strong> Colaborou com o frontend, documentação e testes em várias etapas do projeto.</p>
-            <p><strong>Matheus Stepple:</strong> Contribuiu no pré-processamento de imagens para melhorar a precisão da detecção de texto e na modularização do código.</p>
-        </section>
+        <section id="estrutura">
+            <h2>Estrutura do Projeto</h2>
+            <pre><code>.
+├── CMakeLists.txt                  # Configuração da Build do projeto.
+├── include                         # Diretório de todas as declarações das classes utilizadas.
+│   ├── capture
+│   │   └── webcam_capture.h
+│   ├── detection
+│   │   └── text_detector.h
+│   ├── overlayer
+│   │   └── overlay_renderer.h
+│   ├── threads
+│   │   ├── detection_thread.h
+│   │   ├── translate_thread.h
+│   │   └── webcam_thread.h
+│   └── translation
+│       └── LibreTranslate.h
+├── main.cpp                        # Arquivo principal do projeto.
+├── README.md                       # Documentação do projeto (este arquivo).
+├── run.sh                          # Script de execução do projeto.
+├── src                             # Diretório da lógica de todas as classes.
+│   ├── capture                  
+│   │   ├── CMakeLists.txt          # Configuração da Build para webcam_capture.cpp
+│   │   └── webcam_capture.cpp      # Captura de frames pela Webcam.
+│   ├── detection
+│   │   ├── CMakeLists.txt          # Configuração da Build para text_detector.cpp
+│   │   └── text_detector.cpp       # Detecção do texto no frame gerado pela Webcam.
+│   ├── overlayer
+│   │   ├── CMakeLists.txt          # Configuração da Build para overlay_renderer.cpp
+│   │   └── overlay_renderer.cpp    # Renderiza o texto traduzido na Webcam, por cima do texto original.
+│   ├── threads
+│   │   ├── CMakeLists.txt          # Configuração da Build para todas as Threads.
+│   │   ├── detection_thread.cpp    # Consumidor de webcam_thread e produtor de translate_thread.
+│   │   ├── translate_thread.cpp    # Consumidor de detection_thread.
+│   │   └── webcam_thread.cpp       # Produtor de detection_thread.
+│   └── translation
+│       ├── CMakeLists.txt          # Configuração da Build de LibreTranslate.cpp
+│       └── LibreTranslate.cpp      # Traduz os textos detectados pelo OCR.
+└── struct
+    └── struct_data.h               # Estrutura dos dados que passarão pelas threads.
+</code></pre>
+        </section>
 
-    </div>
+        <section id="imagens">
+            <h2>Imagens em Execução</h2>
+            <p><i>(Espaço reservado para adicionar screenshots ou GIFs do projeto em funcionamento.)</i></p>
+        </section>
+
+    </div>
+
 </body>
 </html>
