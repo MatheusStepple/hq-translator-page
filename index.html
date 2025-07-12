@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto HQ-Translator</title>
+
     <style>
         body {
             background-color: #121212;
@@ -117,19 +120,23 @@
             padding-left: 20px;
         }
 
-        .execution-images img {
+        .resumo-img {
             width: 100%;
             border-radius: 10px;
-            margin-top: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
-        .execution-images p {
+        .img-caption {
             text-align: center;
-            font-size: 0.9em;
             color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 30px;
         }
     </style>
+
 </head>
+
 <body>
 
     <header class="top-header">
@@ -153,16 +160,15 @@
         <section id="resumo">
             <h2>Resumo</h2>
             <p>
-                O <strong>HQ-Translator</strong> é uma aplicação de tradução de texto em tempo real desenvolvida em C++ com arquitetura orientada a objetos. O sistema é estruturado em classes que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A webcam fornece os frames que são analisados pelo OCR Tesseract, traduzidos pela API LibreTranslate e, por fim, exibidos em tempo real com os textos traduzidos sobrepostos ao vídeo original.
-            </p>
-            <p>
-                Para garantir fluidez e desempenho, o sistema aplica uma arquitetura concorrente baseada em múltiplas threads. Cada etapa (captura, OCR, tradução e exibição) é executada por objetos distintos em sua própria thread, formando um pipeline assíncrono. Essa estrutura modular permite fácil manutenção, escalabilidade e maior eficiência.
+                O <strong>HQ-Translator</strong>Trata-se de uma aplicação de tradução de texto em tempo real desenvolvida em C++ com arquitetura orientada a objetos. O sistema é estruturado em classes especializadas que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A classe responsável pela captura utiliza a webcam para adquirir os frames. Outra classe, baseada no Tesseract OCR, realiza a extração dos textos presentes nas imagens. A tradução é gerenciada por uma classe dedicada, que se comunica com a API LibreTranslate para converter o conteúdo detectado para o idioma desejado. Por fim, uma classe de renderização exibe o resultado traduzido sobre o vídeo original.
             </p>
 
-            <div class="execution-images">
-                <img src="image/imagem1.jpeg" alt="Execução do HQ-Translator">
-                <p>Legenda: Exemplo de detecção de texto e tradução automática exibidos em tempo real.</p>
-            </div>
+            <img src="image/imagem1.jpeg" alt="Execução do HQ-Translator" class="resumo-img">
+            <p class="img-caption">Execução do HQ-Translator: detecção OCR e tradução em tempo real.</p>
+
+            <p>
+                Para garantir fluidez e desempenho, o sistema aplica o conceito de concorrência orientada a objetos, utilizando uma arquitetura multi-threaded em pipeline: cada etapa do processo (captura, OCR, tradução e exibição) é tratada por um objeto em sua própria thread, permitindo que as tarefas ocorram em paralelo de forma sincronizada. Essa organização modular melhora a manutenibilidade e escalabilidade da aplicação.
+            </p>
         </section>
 
         <hr>
@@ -181,6 +187,26 @@
 
         <hr>
 
+        <section id="execucao">
+            <h2>Como Executar</h2>
+            <p>Para rodar o projeto, você vai precisar de uma <strong>webcam</strong> e do <strong>Docker</strong> instalado. Com tudo pronto, siga os passos:</p>
+
+            <p><strong>1. Clone o projeto e entre no diretório:</strong></p>
+            <pre><code>git clone https://github.com/marcelohenrique15/hq-translator.git
+cd hq-translator</code></pre>
+
+            <p><strong>2. Dê permissão de execução aos scripts:</strong></p>
+            <pre><code>chmod +x *.sh</code></pre>
+
+            <p><strong>3. Inicie o container Docker:</strong><br>(Isso pode levar alguns minutos na primeira vez)</p>
+            <pre><code>./start_docker.sh</code></pre>
+
+            <p><strong>4. Execute o programa:</strong><br>(Após o passo anterior, você estará no terminal do container. Rode o comando abaixo para compilar e iniciar a aplicação)</p>
+            <pre><code>./run.sh</code></pre>
+        </section>
+
+        <hr>
+
         <section id="equipe">
             <h2>Equipe</h2>
             <p><strong>Marcelo Henrique:</strong> Idealizador do projeto, focou no backend, arquitetura do pipeline de dados e integração das funcionalidades de detecção e tradução.</p>
@@ -191,5 +217,6 @@
         </section>
 
     </div>
+
 </body>
 </html>
