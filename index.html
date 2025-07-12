@@ -85,24 +85,18 @@
             margin: 60px 0;
         }
 
-        /* --- Estilos de Código e Listas --- */
-        pre {
-            background-color: #2c2c2c;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-        }
         ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+        
+        /* --- Estilo para a imagem de demonstração --- */
+        .demo-image {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px solid #333;
         }
     </style>
 </head>
@@ -119,7 +113,7 @@
         </div>
         <p class="highlight">Projeto de Estruturas de Dados Orientadas a Objetos (2025)</p>
         <div class="buttons">
-            <a href="#resumo" class="button">📄 Resumo</a>
+            <a href="#resumo" class="button">📄 Overview</a>
             <a href="https://github.com/marcelohenrique15/hq-translator" target="_blank" class="button">💻 Repositório</a>
         </div>
     </header>
@@ -127,12 +121,22 @@
     <div class="container">
 
         <section id="resumo">
-            <h2>Resumo</h2>
+            <h2>Overview</h2>
             <p>
-                O <strong>HQ-Translator</strong>Trata-se de uma aplicação de tradução de texto em tempo real desenvolvida em C++ com arquitetura orientada a objetos. O sistema é estruturado em classes especializadas que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A classe responsável pela captura utiliza a webcam para adquirir os frames. Outra classe, baseada no Tesseract OCR, realiza a extração dos textos presentes nas imagens. A tradução é gerenciada por uma classe dedicada, que se comunica com a API LibreTranslate para converter o conteúdo detectado para o idioma desejado. Por fim, uma classe de renderização exibe o resultado traduzido sobre o vídeo original.
-
-Para garantir fluidez e desempenho, o sistema aplica o conceito de concorrência orientada a objetos, utilizando uma arquitetura multi-threaded em pipeline: cada etapa do processo (captura, OCR, tradução e exibição) é tratada por um objeto em sua própria thread, permitindo que as tarefas ocorram em paralelo de forma sincronizada. Essa organização modular melhora a manutenibilidade e escalabilidade da aplicação.
+                O <strong>HQ-Translator</strong> é uma aplicação de tradução de texto em tempo real desenvolvida em C++ com uma arquitetura orientada a objetos. O sistema é estruturado em classes especializadas que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A classe de captura utiliza a webcam para adquirir os frames, enquanto outra, baseada no Tesseract OCR, extrai os textos presentes nas imagens. A tradução é gerenciada por uma classe dedicada que se comunica com a API LibreTranslate para converter o conteúdo detectado. Por fim, uma classe de renderização exibe o resultado traduzido sobre o vídeo original.
             </p>
+            <p>
+                Para garantir fluidez e desempenho, o sistema aplica o conceito de concorrência utilizando uma arquitetura multi-threaded em pipeline: cada etapa do processo (captura, OCR, tradução) é tratada por um objeto em sua própria thread. Isso permite que as tarefas ocorram em paralelo de forma sincronizada, evitando que a interface congele. Essa organização modular e concorrente melhora a performance, a manutenibilidade e a escalabilidade da aplicação.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="demonstracao">
+            <h2>Demonstração</h2>
+            <p>Abaixo, uma imagem do HQ-Translator em ação, detectando o texto em uma embalagem e sobrepondo a tradução em tempo real.</p>
+            
+            <img src="demonstracao.jpg" alt="Demonstração do HQ-Translator em execução" class="demo-image">
         </section>
 
         <hr>
@@ -140,33 +144,13 @@ Para garantir fluidez e desempenho, o sistema aplica o conceito de concorrência
         <section id="tecnologias">
             <h2>Tecnologias Utilizadas</h2>
             <ul>
-                <li><strong>C++:</strong> Linguagem principal, escolhida por seu alto desempenho.</li>
-                <li><strong>OpenCV:</strong> Essencial para a captura de vídeo e manipulação de imagem.</li>
-                <li><strong>Tesseract:</strong> Motor de Reconhecimento Óptico de Caracteres (OCR).</li>
-                <li><strong>LibreTranslate:</strong> API de tradução de código aberto.</li>
-                <li><strong>Docker:</strong> Utilizado para criar um ambiente de execução consistente e isolado.</li>
-                <li><strong>CMake:</strong> Sistema de automação da compilação do projeto.</li>
+                <li><strong>C++:</strong> Linguagem principal, escolhida por seu alto desempenho e controle de sistema.</li>
+                <li><strong>OpenCV:</strong> Essencial para a captura de vídeo, manipulação de frames e pré-processamento de imagem.</li>
+                <li><strong>Tesseract:</strong> Motor de Reconhecimento Óptico de Caracteres (OCR) para extrair texto de imagens.</li>
+                <li><strong>LibreTranslate:</strong> API de tradução de código aberto, flexível e auto-hospedável.</li>
+                <li><strong>Docker:</strong> Utilizado para criar um ambiente de execução consistente e isolado, simplificando as dependências.</li>
+                <li><strong>CMake:</strong> Sistema de automação da compilação que gerencia as dependências e a build do projeto.</li>
             </ul>
-        </section>
-
-        <hr>
-
-        <section id="execucao">
-            <h2>Como Executar</h2>
-            <p>Para rodar o projeto, você vai precisar de uma <strong>webcam</strong> e do <strong>Docker</strong> instalado. Com tudo pronto, siga os passos:</p>
-            
-            <p><strong>1. Clone o projeto e entre no diretório:</strong></p>
-            <pre><code>git clone https://github.com/marcelohenrique15/hq-translator.git
-cd hq-translator</code></pre>
-
-            <p><strong>2. Dê permissão de execução aos scripts:</strong></p>
-            <pre><code>chmod +x *.sh</code></pre>
-
-            <p><strong>3. Inicie o container Docker:</strong><br>(Isso pode levar alguns minutos na primeira vez)</p>
-            <pre><code>./start_docker.sh</code></pre>
-
-            <p><strong>4. Execute o programa:</strong><br>(Após o passo anterior, você estará no terminal do container. Rode o comando abaixo para compilar e iniciar a aplicação)</p>
-            <pre><code>./run.sh</code></pre>
         </section>
 
         <hr>
