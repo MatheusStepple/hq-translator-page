@@ -129,7 +129,9 @@
         <section id="resumo">
             <h2>Resumo</h2>
             <p>
-                O <strong>HQ-Translator</strong> é uma aplicação de tradução de texto em tempo real desenvolvida em C++. O sistema captura o vídeo de uma webcam, detecta textos na imagem usando <strong>Tesseract OCR</strong>, traduz com a API <strong>LibreTranslate</strong> e sobrepõe o resultado no vídeo. Para garantir o desempenho e evitar travamentos, o projeto utiliza uma arquitetura <strong>multi-threaded</strong> em pipeline, onde cada etapa (captura, detecção e tradução) roda em paralelo.
+                O <strong>HQ-Translator</strong>Trata-se de uma aplicação de tradução de texto em tempo real desenvolvida em C++ com arquitetura orientada a objetos. O sistema é estruturado em classes especializadas que encapsulam as funcionalidades principais: captura de vídeo, detecção de texto, tradução e renderização. A classe responsável pela captura utiliza a webcam para adquirir os frames. Outra classe, baseada no Tesseract OCR, realiza a extração dos textos presentes nas imagens. A tradução é gerenciada por uma classe dedicada, que se comunica com a API LibreTranslate para converter o conteúdo detectado para o idioma desejado. Por fim, uma classe de renderização exibe o resultado traduzido sobre o vídeo original.
+
+Para garantir fluidez e desempenho, o sistema aplica o conceito de concorrência orientada a objetos, utilizando uma arquitetura multi-threaded em pipeline: cada etapa do processo (captura, OCR, tradução e exibição) é tratada por um objeto em sua própria thread, permitindo que as tarefas ocorram em paralelo de forma sincronizada. Essa organização modular melhora a manutenibilidade e escalabilidade da aplicação.
             </p>
         </section>
 
