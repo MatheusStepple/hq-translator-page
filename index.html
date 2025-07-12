@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HQ Translator</title>
+    <title>Relatório do Projeto: HQ-Translator</title>
     <style>
         body {
-            background-color: #1a1a1a;
-            color: #f0f0f0;
+            background-color: #121212;
+            color: #e0e0e0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .container {
             max-width: 900px;
@@ -20,16 +20,21 @@
         }
         h1, h2, h3 {
             color: #ffffff;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #333;
             padding-bottom: 10px;
             margin-top: 40px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             text-align: center;
+            border-bottom: none;
         }
         h2 {
             font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+            border-bottom: 1px dashed #333;
         }
         a {
             color: #76c6ff;
@@ -38,6 +43,65 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* --- Estilos do Cabeçalho Superior --- */
+        .top-header {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .top-header .authors {
+            margin-top: 15px;
+        }
+        .top-header .authors a {
+            color: #28a745; /* Verde */
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+        .top-header .highlight {
+            color: #dc3545; /* Vermelho */
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .top-header .buttons {
+            margin-top: 25px;
+        }
+        .top-header .button {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .top-header .button:hover {
+            background-color: #555;
+            text-decoration: none;
+        }
+
+        /* --- Estilos da Página de Título --- */
+        .title-page {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        .title-page p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        .title-page h2 {
+            font-size: 1.8em;
+            border-bottom: none;
+            margin: 30px 0;
+        }
+
+        /* --- Estilos da Navegação / Índice --- */
         nav {
             background-color: #252525;
             padding: 15px;
@@ -58,6 +122,8 @@
         nav a {
             font-weight: bold;
         }
+
+        /* --- Estilos de Código e Tabelas --- */
         pre {
             background-color: #2c2c2c;
             padding: 15px;
@@ -66,174 +132,224 @@
             white-space: pre-wrap;
             word-wrap: break-word;
             font-family: "Courier New", Courier, monospace;
+            font-size: 0.9em;
         }
         code {
             font-family: "Courier New", Courier, monospace;
         }
-        ul, ol {
-            padding-left: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+        }
+        td:first-child {
+            width: 5%;
+            font-weight: bold;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
+    <header class="top-header">
+        <h1>HQ-Translator</h1>
+        <div class="authors">
+            <a href="#contribuicoes">Marcelo Henrique</a>
+            <a href="#contribuicoes">Gabriel Nascimento</a>
+            <a href="#contribuicoes">Gustavo Ferreira</a>
+            <a href="#contribuicoes">Elinaldo Emanoel</a>
+            <a href="#contribuicoes">Matheus Stepple</a>
+        </div>
+        <p class="highlight">Projeto de Estruturas de Dados Orientadas a Objetos (2025)</p>
+        <div class="buttons">
+            <a href="#relatorio" class="button">📄 Relatório</a>
+            <a href="https://github.com/marcelohenrique15/hq-translator" target="_blank" class="button">💻 Repositório</a>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>HQ Translator</h1>
+        <section id="title-page" class="title-page">
+            <p>UNIVERSIDADE FEDERAL DE PERNAMBUCO</p>
+            <p>CAMPUS RECIFE</p>
+            <p>CENTRO DE INFORMÁTICA</p>
+            <p>CURSO DE SISTEMAS DE INFORMAÇÃO</p>
+            <h2>RELATÓRIO DE PROJETO DE ESTRUTURAS DE DADOS ORIENTADAS A OBJETOS: HQ-Translator</h2>
+            <p>Recife</p>
+            <p>2025</p>
+        </section>
 
-        <nav>
-            <h2>Índice</h2>
-            <ul>
-                <li><a href="#visao-geral">Visão Geral</a></li>
-                <li><a href="#ferramentas">Ferramentas</a></li>
-                <li><a href="#requisitos">Requisitos</a></li>
-                <li><a href="#execucao">Execução</a></li>
-                <li><a href="#estrutura">Estrutura do Projeto</a></li>
-                <li><a href="#imagens">Imagens em Execução</a></li>
-            </ul>
-        </nav>
-
-        <section id="visao-geral">
-            <h2>Visão Geral</h2>
-            <p>Este projeto, HQ Translator, é uma aplicação de tradução de texto em tempo real desenvolvida em C++. Ele foi projetado para capturar frames de uma webcam, detectar textos nos frames, traduzi-los instantaneamente e, em seguida, sobrepor as traduções de volta no feed de vídeo original. A solução adota uma arquitetura robusta e multi-threaded para garantir alto desempenho.</p>
+        <main id="relatorio">
             
-            <h3>Como Funciona a Arquitetura Multi-threaded: Paralelismo em pipeline.</h3>
-            <p>O Hq Translator opera através de um eficiente pipeline de processamento assíncrono, onde cada etapa é executada em uma thread dedicada, garantindo que operações complexas não congelem a aplicação:</p>
-            <ul>
-                <li><strong>Captura de Vídeo:</strong> uma thread dedicada gerencia a webcam, capturando frames continuamente e os disponibilizando para as próximas etapas.</li>
-                <li><strong>Detecção de Texto (OCR):</strong> outra thread consome esses frames, utilizando a poderosa biblioteca Tesseract OCR para identificar e extrair textos presentes na imagem. Para otimizar o desempenho, esta etapa é executada em intervalos controlados.</li>
-                <li><strong>Tradução Inteligente:</strong> uma terceira thread recebe os textos detectados. Ela se integra com a API LibreTranslate para realizar as traduções. Um mecanismo de cache é implementado para armazenar traduções frequentes, minimizando chamadas repetidas à API e melhorando a performance.</li>
-                <li><strong>Exibição e Sobreposição:</strong> a thread principal da aplicação exibe o feed de vídeo da webcam. As traduções obtidas são desenhadas dinamicamente sobre o vídeo, permitindo que o usuário veja a tradução em tempo real.</li>
-            </ul>
-        </section>
+            <nav>
+                <ul>
+                    <li><a href="#introducao">1. Introdução</a></li>
+                    <li><a href="#arquitetura">2. Arquitetura</a></li>
+                    <li><a href="#design-poo">3. Design POO</a></li>
+                    <li><a href="#multi-thread">4. Multi-thread</a></li>
+                    <li><a href="#tecnologias">5. Tecnologias</a></li>
+                    <li><a href="#instalacao">6. Instalação</a></li>
+                    <li><a href="#execucao">7. Execução</a></li>
+                    <li><a href="#desafios">8. Desafios</a></li>
+                    <li><a href="#contribuicoes">9. Contribuições</a></li>
+                </ul>
+            </nav>
 
-        <section id="ferramentas">
-            <h2>Ferramentas</h2>
-            <p>Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas principais:</p>
-            <ul>
-                <li><strong>C++:</strong> a linguagem de programação principal para todo o desenvolvimento do sistema.</li>
-                <li><strong>OpenCV:</strong> biblioteca de visão computacional essencial para a captura de vídeo da webcam, manipulação de frames e pré-processamento de imagens.</li>
-                <li><strong>Tesseract:</strong> motor de Reconhecimento Óptico de Caracteres, utilizado para a detecção e extração de texto de imagens e frames de vídeo.</li>
-                <li><strong>Nlohmann:</strong> biblioteca C++ para parseamento e serialização de dados no formato JSON, fundamental para a comunicação com a API do LibreTranslate.</li>
-                <li><strong>LibreTranslate:</strong> uma API de tradução de código aberto, empregada para realizar as traduções dos textos detectados.</li>
-            </ul>
+            <section id="introducao">
+                <h2>1. INTRODUÇÃO</h2>
+                <p>Este projeto, HQ-Translator, é uma aplicação de tradução de texto em tempo real desenvolvida em C++. Ele foi projetado para capturar frames de uma webcam, detectar textos nas imagens, traduzi-los instantaneamente e, em seguida, sobrepor as traduções de volta no feed de vídeo original. A solução adota uma arquitetura robusta, modular e multi-threaded para garantir alto desempenho e responsividade.</p>
+                <p>A escolha deste tema para o projeto foi motivada pelo objetivo de aprofundar o entendimento e a aplicação prática da linguagem C++ no contexto da Programação Orientada a Objetos (POO). Para isso, exploramos ativamente conceitos como a definição de classes com seus atributos e métodos, o princípio fundamental de encapsulamento para proteção de dados, e a herança para reuso de código e modelagem de componentes.</p>
+                <p>No desenvolvimento, utilizamos bibliotecas como OpenCV para visão computacional, Tesseract OCR para detecção de texto e LibreTranslate para a tradução, suportadas por nlohmann/json e cpr para comunicação API. O gerenciamento do projeto e da compilação foi feito com CMake, enquanto a arquitetura assíncrona se baseou no processamento eficiente de dados que C++ oferece, notadamente através do paralelismo em pipeline e mecanismos de sincronização da Standard Template Library (STL).</p>
+            </section>
 
-            <h3>Ferramentas de Desenvolvimento e Comunicação</h3>
-            <p>Além das ferramentas citadas anteriormente, temos as ferramentas de desenvolvimento e comunicação:</p>
-            <ul>
-                <li><strong>VS Code:</strong> ambiente de Desenvolvimento Integrado (IDE) leve e poderoso, utilizado para a escrita, depuração e gerenciamento do código-fonte.</li>
-                <li><strong>Git:</strong> sistema de controle de versão distribuído, essencial para o rastreamento de alterações no código.</li>
-                <li><strong>GitHub:</strong> plataforma de hospedagem de código-fonte baseada em Git, utilizada para o compartilhamento do repositório, colaboração em equipe, controle de versões e gerenciamento de projetos.</li>
-                <li><strong>WhatsApp:</strong> utilizado para comunicação rápida e direta entre os membros da equipe.</li>
-                <li><strong>Discord:</strong> plataforma de comunicação que oferece recursos como chat de texto, voz e vídeo, canais temáticos e compartilhamento de arquivos, ideal para discussões mais aprofundadas e reuniões de equipe.</li>
-            </ul>
-        </section>
+            <section id="arquitetura">
+                <h2>2. ARQUITETURA DO SISTEMA</h2>
+                <p>A arquitetura do HQ-Translator é feita como um pipeline de processamento de vídeo multi-threaded, projetado para maximizar a performance e a responsividade da aplicação. Essa abordagem é fundamentada em uma arquitetura modular, onde o projeto é logicamente dividido em componentes independentes. Essa divisão é claramente refletida na estrutura de diretórios: (include, src e struct, e subdiretórios como capture, detection, overlayer, threads e translation).</p>
+                <p>Essa modularização não só facilita a organização e manutenção do código, mas também permite um gerenciamento mais claro e eficiente das threads. Cada módulo encapsula responsabilidades específicas, por exemplo, capture cuida da entrada de vídeo, detection do OCR, e translation da API de tradução.</p>
+                <p>O diretório threads atua como um hub central, concentrando os processos (webcam_thread, detection_thread, translate_thread) que orquestram a execução paralela de cada fase do pipeline, garantindo que operações intensivas não bloqueiem o fluxo geral do sistema.</p>
+            </section>
 
-        <section id="requisitos">
-            <h2>Requisitos</h2>
-            <p>É necessário ter uma Webcam e o Docker instalado. Caso não tenha o Docker instalado, siga o passo a passo para instalação no Linux ou via WSL:</p>
-            <ol>
-                <li>
-                    Instale as dependências do Docker:
-                    <pre><code>sudo apt-get update
-sudo apt-get install ca-certificates curl apt-transport-https software-properties-common</code></pre>
-                </li>
-                <li>
-                    Adicione a chave GPG:
-                    <pre><code>sudo install -m 0755 -d /etc/apt/keyrings
+            <section id="design-poo">
+                <h2>3. DESIGN ORIENTADO A OBJETOS</h2>
+                <p><i>(acrescentar sobre as classes e suas funcionalidades, apontar os uso dos conceitos de POO, o uso das bibliotecas e o diagrama das classes)</i></p>
+            </section>
+
+            <section id="multi-thread">
+                <h2>4. IMPLEMENTAÇÃO MULTI-THREADED E CONCORRÊNCIA</h2>
+                <p><i>(aprofundar a ideia de pipeline e os mecanismos de sincronização usando as ferramentas da STL. (paralelismo em pipeline e mecanismo de sincronização, thread, queue, mutex…))</i></p>
+            </section>
+
+            <section id="tecnologias">
+                <h2>5. TECNOLOGIAS E FERRAMENTAS UTILIZADAS</h2>
+                <p>O projeto foi construído com um conjunto de tecnologias essenciais para seus objetivos de visão computacional e processamento em tempo real.</p>
+                
+                <h3>5.1 Tecnologias</h3>
+                <p>São os componentes que formam o núcleo funcional do software, as linguagens e bibliotecas que executam as tarefas principais da aplicação:</p>
+                <ul>
+                    <li><strong>C++:</strong> Linguagem principal, escolhida pelo alto desempenho.</li>
+                    <li><strong>OpenCV:</strong> Para captura de vídeo e manipulação de imagem.</li>
+                    <li><strong>Tesseract:</strong> Motor de Reconhecimento Óptico de Caracteres (OCR).</li>
+                    <li><strong>LibreTranslate:</strong> API utilizada para a tradução dos textos.</li>
+                    <li><strong>nlohmann/json:</strong> Biblioteca para compartilhamento de dados JSON da API.</li>
+                </ul>
+
+                <h3>5.2 Ferramentas Utilizadas</h3>
+                <p>São os programas e sistemas que auxiliam no processo de criação, gerenciamento, compilação e distribuição do software. Elas são cruciais para o fluxo de trabalho do desenvolvedor:</p>
+                <ul>
+                    <li><strong>CMake:</strong> Sistema de automação da compilação.</li>
+                    <li><strong>Docker:</strong> Para criar um ambiente de execução consistente e isolado.</li>
+                    <li><strong>Git / GitHub:</strong> Para controle de versão e colaboração.</li>
+                    <li><strong>Visual Studio Code:</strong> Editor de código/ambiente de desenvolvimento integrado (IDE).</li>
+                    <li><strong>Discord e Whatsapp:</strong> Foram cruciais para assegurar a comunicação e colaboração da equipe.</li>
+                </ul>
+            </section>
+
+            <section id="instalacao">
+                <h2>6. REQUISITOS DE INSTALAÇÃO</h2>
+                <p>É necessário ter uma Webcam e o Docker instalado. Para instalar o Docker no Linux ou WSL, siga os passos na tabela abaixo:</p>
+                <table>
+                    <thead>
+                        <tr><th>Passo</th><th>Descrição e Comando</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Instalar dependências:</strong> Atualize a lista de pacotes e instale as ferramentas necessárias.<pre><code>sudo apt-get update
+sudo apt-get install ca-certificates curl apt-transport-https software-properties-common</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Adicionar a chave de segurança (GPG):</strong> Garante que o download do Docker é autêntico.<pre><code>sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc</code></pre>
-                </li>
-                <li>
-                    Adicione o repositório Docker ao apt sources:
-                    <pre><code>echo \
+sudo chmod a+r /etc/apt/keyrings/docker.asc</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Adicionar o repositório do Docker:</strong> Informa ao sistema onde encontrar os pacotes do Docker.<pre><code>echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
 $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code></pre>
-                </li>
-                <li>
-                    Instale o Docker:
-                    <pre><code>sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
-                </li>
-                <li>
-                    Adicione seu usuário ao grupo docker para evitar o uso de "sudo" (IMPORTANTE PARA EXECUÇÃO):
-                    <pre><code>sudo usermod -aG docker ${USER}</code></pre>
-                </li>
-            </ol>
-            <p>Necessária reinicialização do computador após o passo 5.</p>
-        </section>
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Instalar o Docker Engine:</strong> Instalar o programa principal e seus componentes.<pre><code>sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Configurar permissões de usuário:</strong> Permite usar o Docker sem <code>sudo</code>. (Passo Importante!)<pre><code>sudo usermod -aG docker ${USER}</code></pre></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>OBS:</strong> Após o passo 5, é essencial reiniciar o computador ou, no mínimo, fechar e abrir novamente o terminal para que a alteração de permissão tenha efeito.</p>
+            </section>
+            
+            <section id="execucao">
+                <h2>7. EXECUÇÃO DO PROJETO</h2>
+                <p>Para clonar e executar o projeto, siga os passos na tabela abaixo:</p>
+                <table>
+                     <thead>
+                        <tr><th>Passo</th><th>Descrição e Comando</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Clonar o projeto:</strong> Baixe o código-fonte do GitHub e entre no diretório criado.<pre><code>git clone https://github.com/marcelohenrique15/hq-translator.git
+cd hq-translator</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Dar permissão aos scripts:</strong> Torne os arquivos de script do projeto executáveis.<pre><code>chmod +x start_docker.sh stop_docker.sh delete_docker.sh run.sh</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Ativar o container Docker:</strong> Inicie o ambiente de desenvolvimento. (Pode levar alguns minutos na primeira vez).<pre><code>./start_docker.sh</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Executar o projeto:</strong> Após o passo anterior, você estará dentro do terminal do Docker. Use o comando abaixo para compilar e rodar a aplicação.<pre><code>./run.sh</code></pre></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section id="execucao">
-            <h2>Execução</h2>
-            <ol>
-                <li>
-                    Clone o projeto:
-                    <pre><code>git clone https://github.com/marcelohenrique15/hq-translator.git
-cd hq-translator</code></pre>
-                </li>
-                <li>
-                    Dê permissão para os scripts do projeto:
-                    <pre><code>chmod +x start_docker.sh stop_docker.sh delete_docker.sh run.sh</code></pre>
-                </li>
-                <li>
-                    Ative o Docker (pode levar alguns minutos):
-                    <pre><code>./start_docker.sh</code></pre>
-                </li>
-                <li>
-                    E após entrar no terminal bash do Docker, execute:
-                    <pre><code>./run.sh</code></pre>
-                </li>
-            </ol>
-        </section>
+            <section id="desafios">
+                <h2>8. DESAFIOS E SOLUÇÕES</h2>
+                <p>Durante o desenvolvimento do HQ-Translator, a equipe enfrentou diversos desafios técnicos que exigiram soluções robustas, como:</p>
+                <ul>
+                    <li><strong>A escolha do tema:</strong> a proposta do projeto, baseada em visão computacional, representou um grande desafio considerando o tempo limitado para a sua execução. Ainda assim, todos os membros demonstraram determinação e comprometimento, resultando na entrega de uma solução funcional e bem estruturada.</li>
+                    <li><strong>O desempenho:</strong> para evitar que o OCR e as chamadas de API congelassem o vídeo, foi utilizada uma arquitetura em pipeline multi-threaded e um sistema de cache para reutilizar traduções já realizadas.</li>
+                    <li><strong>Problemas com a precisão do OCR:</strong> a baixa acurácia da detecção de texto foi aprimorada com a aplicação de filtros de pré-processamento de imagem usando OpenCV, como escala de cinza e limiarização, antes da análise, foi um processo longo, mas que deu certo.</li>
+                    <li><strong>A integração de dependências:</strong> a complexidade na configuração das bibliotecas foi solucionada com o uso do CMake, facilitando a integração e organização do projeto.</li>
+                </ul>
+            </section>
 
-        <section id="estrutura">
-            <h2>Estrutura do Projeto</h2>
-            <pre><code>.
-├── CMakeLists.txt                  # Configuração da Build do projeto.
-├── include                         # Diretório de todas as declarações das classes utilizadas.
-│   ├── capture
-│   │   └── webcam_capture.h
-│   ├── detection
-│   │   └── text_detector.h
-│   ├── overlayer
-│   │   └── overlay_renderer.h
-│   ├── threads
-│   │   ├── detection_thread.h
-│   │   ├── translate_thread.h
-│   │   └── webcam_thread.h
-│   └── translation
-│       └── LibreTranslate.h
-├── main.cpp                        # Arquivo principal do projeto.
-├── README.md                       # Documentação do projeto (este arquivo).
-├── run.sh                          # Script de execução do projeto.
-├── src                             # Diretório da lógica de todas as classes.
-│   ├── capture                  
-│   │   ├── CMakeLists.txt          # Configuração da Build para webcam_capture.cpp
-│   │   └── webcam_capture.cpp      # Captura de frames pela Webcam.
-│   ├── detection
-│   │   ├── CMakeLists.txt          # Configuração da Build para text_detector.cpp
-│   │   └── text_detector.cpp       # Detecção do texto no frame gerado pela Webcam.
-│   ├── overlayer
-│   │   ├── CMakeLists.txt          # Configuração da Build para overlay_renderer.cpp
-│   │   └── overlay_renderer.cpp    # Renderiza o texto traduzido na Webcam, por cima do texto original.
-│   ├── threads
-│   │   ├── CMakeLists.txt          # Configuração da Build para todas as Threads.
-│   │   ├── detection_thread.cpp    # Consumidor de webcam_thread e produtor de translate_thread.
-│   │   ├── translate_thread.cpp    # Consumidor de detection_thread.
-│   │   └── webcam_thread.cpp       # Produtor de detection_thread.
-│   └── translation
-│       ├── CMakeLists.txt          # Configuração da Build de LibreTranslate.cpp
-│       └── LibreTranslate.cpp      # Traduz os textos detectados pelo OCR.
-└── struct
-    └── struct_data.h               # Estrutura dos dados que passarão pelas threads.
-</code></pre>
-        </section>
+            <section id="contribuicoes">
+                <h2>9. CONTRIBUIÇÃO DOS MEMBROS DO PROJETO</h2>
+                <h3>Marcelo Henrique</h3>
+                <p>Idealizador e líder do projeto, teve participação estratégica e contínua em todas as etapas do desenvolvimento Backend. Coordenou a integração das funcionalidades e foi peça central na implementação do algoritmo de detecção e tradução de texto. Estruturou o pipeline de dados utilizando filas e Threads paralelas, garantindo o desempenho e a escalabilidade do sistema.</p>
+                
+                <h3>Gabriel Nascimento</h3>
+                <p>Responsável pela interface no frontend, também colaborou em diversas outras partes do projeto, sendo peça-chave em sua execução.</p>
+                
+                <h3>Gustavo Ferreira</h3>
+                <p>Iniciou o desenvolvimento do algoritmo de detecção de texto e foi responsável pela implementação da funcionalidade de realidade aumentada, substituindo o texto original por sua tradução em tempo real. Contribuiu de forma significativa com seu conhecimento técnico em orientação a objetos, sendo peça-chave na construção da arquitetura técnica do sistema.</p>
+                
+                <h3>Elinaldo Emanoel</h3>
+                <p>Atuou no desenvolvimento do frontend com Gabriel e esteve presente em praticamente todas as etapas do projeto, contribuindo com a documentação, testes e demais tarefas, mostrando grande envolvimento e proatividade.</p>
+                
+                <h3>Matheus Stepple</h3>
+                <p>Contribuiu para o aprimoramento do pré-processamento de imagens e dos filtros utilizados na detecção de texto. Também aplicou conceitos de orientação a objetos no código, colaborando ativamente para a organização e modularização da solução.</p>
+            </section>
 
-        <section id="imagens">
-            <h2>Imagens em Execução</h2>
-            <p><i>(Espaço reservado para adicionar screenshots ou GIFs do projeto em funcionamento.)</i></p>
-        </section>
-
+        </main>
     </div>
 
 </body>
